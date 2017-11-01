@@ -1,0 +1,8 @@
+<VirtualHost *:80>
+  DirectoryIndex index.html
+
+  DocumentRoot /var/www/localhost/htdocs
+
+  ProxyPass / http://docker-apache-proxy-target/
+  ProxyPassReverse / http://docker-apache-proxy-target/
+</VirtualHost>

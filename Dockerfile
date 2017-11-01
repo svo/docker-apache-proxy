@@ -11,7 +11,7 @@ RUN apk update && apk upgrade \
 RUN rm -rf /var/www/localhost/htdocs \
     && mkdir -p /run/apache2
 
-COPY ../docker-apache-proxy-virtualhost /etc/apache2/conf.d/docker-apache-proxy.conf
+COPY ./virtualhost /etc/apache2/conf.d/docker-apache-proxy.conf
 
 CMD httpd -D FOREGROUND
 
